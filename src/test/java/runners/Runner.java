@@ -9,12 +9,12 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/cep.feature",
         glue = "steps",
-        tags = "~@ignore",
-        plugin = {"pretty", "html:target/report-cucumber.html"},
+        //tags = "@caminho01",
+        plugin = {"pretty", "html:target/report_html_busca"},
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
-        strict = false,
-        dryRun = false
+        dryRun = false,
+        strict = false
 )
 
 public class Runner {
