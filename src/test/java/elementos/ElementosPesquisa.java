@@ -3,10 +3,10 @@ package elementos;
 
 import org.openqa.selenium.By;
 
-public class ElementosPagina {
+public class ElementosPesquisa {
 
     private static String url = "https://www.amazon.com.br/";
-    private By clicaCep = By.id("[glow-ingress-line1]");
+//    private By clicaCep = By.id("[glow-ingress-line1]");
 
 
     public static String getUrl() {
