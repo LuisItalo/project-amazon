@@ -1,12 +1,13 @@
 package steps;
 
-import BasePages.BaseStep;
+
+import basePages.BaseStep;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 
-
 public class Hook {
+
     @Before
     public void BeforeAllTest() throws Throwable {
         BaseStep.abrindo_nav();
