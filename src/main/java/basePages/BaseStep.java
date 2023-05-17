@@ -13,7 +13,7 @@ public class BaseStep {
     public static WebDriver driver;
 
     public static void abrindo_nav() throws Throwable {
-        //System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }

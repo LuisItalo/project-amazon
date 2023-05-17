@@ -1,22 +1,24 @@
 package steps;
 
-import BasePages.BaseStep;
-import PageObjects.PesquisaPage;
+import basePages.BaseStep;
 import cucumber.api.PendingException;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
+import pageObjects.BuscaPage;
 
-import static Entidades.TimerSleeper.timesleep;
+import static entidades.TimerSleeper.timesleep;
 
-public class PesquisaSteps extends BaseStep {
+public class BuscaSteps extends BaseStep {
 
-    PesquisaPage p = new PesquisaPage(PesquisaSteps.driver);
+
+    BuscaPage busca = new BuscaPage(BuscaSteps.driver);
+
 
     @Dado("^que o usuario acessa o site da amazon$")
     public void queOUsuarioAcessaOSiteDaAmazon() throws Throwable {
-        p.abrindo_pagina();
-        timesleep(1000);
+        busca.abrindo_pag();
+        timesleep(2000);
     }
 
     @Entao("^verifica se o url da acesso ao site amazon$")
@@ -36,6 +38,11 @@ public class PesquisaSteps extends BaseStep {
         // Write code here that turns the phrase above into concrete actions
         throw new PendingException();
     }
+
+
+
+
+
 
 
 }

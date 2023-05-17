@@ -18,7 +18,7 @@ public class CepSteps extends BaseStep {
     public void queAcessoAPaginaDaAmazon() throws Throwable {
        c.abrindo_pagina();
        c.clica_Cep();
-//       timesleep(4000);
+       timesleep(2000);
     }
 
     @Quando("^coloco um cep invalido$")

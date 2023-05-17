@@ -1,4 +1,4 @@
-$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/cep.feature");
+$(document).ready(function() {var formatter = new CucumberHTML.DOMFormatter($('.cucumber-report'));formatter.uri("src/test/resources/features/pesquisa.feature");
 formatter.feature({
   "comments": [
     {
@@ -7,62 +7,129 @@ formatter.feature({
     }
   ],
   "line": 3,
-  "name": "escolher cep",
-  "description": "como usuario quero escolher cep\npara facilitar o frete",
-  "id": "escolher-cep",
+  "name": "",
+  "description": "como usuario na pagina da Amazon\nquero fazer a busca por um produto\ne validar o retorno dessa busca",
+  "id": "",
   "keyword": "Funcionalidade"
 });
-formatter.before({
-  "duration": 6085341607,
-  "status": "passed"
-});
-formatter.scenario({
-  "line": 7,
-  "name": "cep invalido",
+formatter.scenarioOutline({
+  "line": 13,
+  "name": "campo de busca vazio",
   "description": "",
-  "id": "escolher-cep;cep-invalido",
-  "type": "scenario",
-  "keyword": "Cenario"
+  "id": ";campo-de-busca-vazio",
+  "type": "scenario_outline",
+  "keyword": "Esquema do Cenário"
 });
 formatter.step({
-  "line": 8,
-  "name": "que acesso a pagina da amazon",
-  "keyword": "Dado "
-});
-formatter.step({
-  "line": 9,
-  "name": "coloco um cep invalido",
+  "line": 14,
+  "name": "o usuario faz a busca com \u003ccampo-vazio\u003e",
   "keyword": "Quando "
 });
 formatter.step({
+  "line": 15,
+  "name": "o sistema vai permanecer na pagina",
+  "keyword": "Entao "
+});
+formatter.examples({
+  "line": 17,
+  "name": "campo de busca vazio",
+  "description": "",
+  "id": ";campo-de-busca-vazio;campo-de-busca-vazio",
+  "rows": [
+    {
+      "cells": [
+        "campo-vazio"
+      ],
+      "line": 18,
+      "id": ";campo-de-busca-vazio;campo-de-busca-vazio;1"
+    },
+    {
+      "cells": [
+        "\"         \""
+      ],
+      "line": 19,
+      "id": ";campo-de-busca-vazio;campo-de-busca-vazio;2"
+    }
+  ],
+  "keyword": "Exemplos"
+});
+formatter.before({
+  "duration": 3830086706,
+  "status": "passed"
+});
+formatter.background({
+  "line": 9,
+  "name": "usuario acessa o site",
+  "description": "",
+  "type": "background",
+  "keyword": "Contexto"
+});
+formatter.step({
   "line": 10,
-  "name": "o sistema pede um cep valido",
+  "name": "que o usuario acessa o site da amazon",
+  "keyword": "Dado "
+});
+formatter.step({
+  "line": 11,
+  "name": "verifica se o url da acesso ao site amazon",
   "keyword": "Entao "
 });
 formatter.match({
-  "location": "CepSteps.queAcessoAPaginaDaAmazon()"
+  "location": "BuscaSteps.queOUsuarioAcessaOSiteDaAmazon()"
 });
 formatter.result({
-  "duration": 10806027712,
+  "duration": 7304867368,
   "status": "passed"
 });
 formatter.match({
-  "location": "CepSteps.colocoUmCepInvalido()"
+  "location": "BuscaSteps.verificaSeOUrlDaAcessoAoSiteAmazon()"
 });
 formatter.result({
-  "duration": 3410767899,
-  "status": "passed"
+  "duration": 1880613,
+  "error_message": "cucumber.api.PendingException: TODO: implement me\n\tat steps.BuscaSteps.verificaSeOUrlDaAcessoAoSiteAmazon(BuscaSteps.java:27)\n\tat ✽.Entao verifica se o url da acesso ao site amazon(src/test/resources/features/pesquisa.feature:11)\n",
+  "status": "pending"
+});
+formatter.scenario({
+  "line": 19,
+  "name": "campo de busca vazio",
+  "description": "",
+  "id": ";campo-de-busca-vazio;campo-de-busca-vazio;2",
+  "type": "scenario",
+  "keyword": "Esquema do Cenário"
+});
+formatter.step({
+  "line": 14,
+  "name": "o usuario faz a busca com \"         \"",
+  "matchedColumns": [
+    0
+  ],
+  "keyword": "Quando "
+});
+formatter.step({
+  "line": 15,
+  "name": "o sistema vai permanecer na pagina",
+  "keyword": "Entao "
 });
 formatter.match({
-  "location": "CepSteps.oSistemaPedeUmCepValido()"
+  "arguments": [
+    {
+      "val": "         ",
+      "offset": 27
+    }
+  ],
+  "location": "BuscaSteps.oUsuarioFazABuscaCom(String)"
 });
 formatter.result({
-  "duration": 97325960,
-  "status": "passed"
+  "status": "skipped"
+});
+formatter.match({
+  "location": "BuscaSteps.oSistemaVaiPermanecerNaPagina()"
+});
+formatter.result({
+  "status": "skipped"
 });
 formatter.after({
-  "duration": 1679080212,
-  "error_message": "java.lang.NullPointerException\n\tat basePages.BaseStep.Screenshot(BaseStep.java:31)\n\tat steps.Hook.AfterAllTest(Hook.java:18)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\n\tat cucumber.runtime.Utils$1.call(Utils.java:40)\n\tat cucumber.runtime.Timeout.timeout(Timeout.java:16)\n\tat cucumber.runtime.Utils.invoke(Utils.java:34)\n\tat cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)\n\tat cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)\n\tat cucumber.runtime.Runtime.runHooks(Runtime.java:212)\n\tat cucumber.runtime.Runtime.runAfterHooks(Runtime.java:206)\n\tat cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:46)\n\tat cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:102)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)\n\tat cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:95)\n\tat cucumber.api.junit.Cucumber.runChild(Cucumber.java:38)\n\tat org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)\n\tat org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)\n\tat org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)\n\tat org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)\n\tat org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)\n\tat org.junit.runners.ParentRunner.run(ParentRunner.java:363)\n\tat cucumber.api.junit.Cucumber.run(Cucumber.java:100)\n\tat org.junit.runner.JUnitCore.run(JUnitCore.java:137)\n\tat com.intellij.junit4.JUnit4IdeaTestRunner.startRunnerWithArgs(JUnit4IdeaTestRunner.java:69)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater$1.execute(IdeaTestRunner.java:38)\n\tat com.intellij.rt.execution.junit.TestsRepeater.repeat(TestsRepeater.java:11)\n\tat com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:35)\n\tat com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:232)\n\tat com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:55)\n",
-  "status": "failed"
+  "duration": 138159017,
+  "status": "passed"
 });
 });
