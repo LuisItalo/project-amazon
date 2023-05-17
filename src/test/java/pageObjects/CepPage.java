@@ -1,7 +1,7 @@
 package pageObjects;
 
 import basePages.BasePage;
-import elementos.ElementosCep;
+import Elementos.ElementosCep;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
 
