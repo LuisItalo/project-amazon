@@ -1,18 +1,17 @@
 package steps;
 
 import BasePages.BaseStep;
-import PageObjects.pesquisaPage;
+import PageObjects.PesquisaPage;
 import cucumber.api.PendingException;
 import cucumber.api.java.pt.Dado;
 import cucumber.api.java.pt.Entao;
 import cucumber.api.java.pt.Quando;
-import org.openqa.selenium.WebDriver;
 
 import static Entidades.TimerSleeper.timesleep;
 
-public class pesquisaSteps extends BaseStep {
+public class PesquisaSteps extends BaseStep {
 
-    pesquisaPage p = new pesquisaPage(pesquisaSteps.driver);
+    PesquisaPage p = new PesquisaPage(PesquisaSteps.driver);
 
     @Dado("^que o usuario acessa o site da amazon$")
     public void queOUsuarioAcessaOSiteDaAmazon() throws Throwable {

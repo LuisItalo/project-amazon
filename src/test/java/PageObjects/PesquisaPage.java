@@ -4,17 +4,17 @@ import BasePages.BasePage;
 import org.openqa.selenium.WebDriver;
 
 import static Entidades.TimerSleeper.timesleep;
-import Elementos.elementosPesquisa;
+import Elementos.ElementosPesquisa;
 
-public class pesquisaPage extends BasePage {
+public class PesquisaPage extends BasePage {
 
 
-    public pesquisaPage(WebDriver d) {
+    public PesquisaPage(WebDriver d) {
         super(d);
     }
 
     public void abrindo_pagina(){
-        driver.get(elementosPesquisa.getUrl());
+        driver.get(ElementosPesquisa.getUrl());
         timesleep(1000);
     }
 

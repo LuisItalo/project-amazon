@@ -1,6 +1,6 @@
 package Elementos;
 
-public class elementosPesquisa {
+public class ElementosPesquisa {
 
     private static String url = "https://www.amazon.com.br/";
 
