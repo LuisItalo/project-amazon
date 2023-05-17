@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features/pesquisa.feature",
         glue = "steps",
         //tags = "@caminho01",
-        plugin = {"pretty", "html:target/report_html_busca"},
+        //plugin = {"pretty", "html:target/report_html_busca"},
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
         dryRun = false
