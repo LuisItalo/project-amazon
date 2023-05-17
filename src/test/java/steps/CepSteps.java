@@ -17,19 +17,20 @@ public class CepSteps extends BaseStep {
     @Dado("^que acesso a pagina da amazon$")
     public void queAcessoAPaginaDaAmazon() throws Throwable {
        c.abrindo_pagina();
-       timesleep(4000);
+       c.clica_Cep();
+//       timesleep(4000);
     }
 
     @Quando("^coloco um cep invalido$")
     public void colocoUmCepInvalido() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        c.digita_cep();
+        c.clica_confirm();
+        timesleep(2000);
     }
 
     @Entao("^o sistema pede um cep valido$")
     public void oSistemaPedeUmCepValido() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        c.verifica_cep();
     }
 
 
