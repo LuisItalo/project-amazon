@@ -21,9 +21,17 @@ public class CepPage extends BasePage {
         driver.findElement(ElementosCep.clicaCep).click();
     }
 
-    public void digita_cep(){
+    public void digita_cep_inval(){
         driver.findElement((ElementosCep.digitaCep)).sendKeys("789412");
     }
+    public void digita_cep_esp(){
+        driver.findElement((ElementosCep.digitaCep)).sendKeys("*()#$");
+    }
+    public void digita_cep_let(){
+        driver.findElement((ElementosCep.digitaCep)).sendKeys("ASDFGGHJK");
+    }
+
+
     public void clica_confirm(){
         driver.findElement((ElementosCep.clicaConfirm)).click();
     }
