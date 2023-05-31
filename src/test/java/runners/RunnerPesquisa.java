@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/pesquisa.feature",
         glue = "steps",
-        //tags = "@caminho01",
+        tags = "@tp1",
         //plugin = {"pretty", "html:target/report_html_busca"},
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
