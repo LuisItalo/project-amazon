@@ -15,44 +15,15 @@ public class CepSteps extends BaseStep {
 
 
     @Dado("^que acesso a pagina da amazon$")
-    public void queAcessoAPaginaDaAmazon() throws Throwable {
+    public void queAcessoAPaginaDaAmazon() {
        c.abrindo_pagina();
        c.clica_Cep();
     }
 
-    @Quando("^coloco um cep invalido$")
-    public void colocoUmCepInvalido() throws Throwable {
-        c.digita_cep_inval();
-        c.clica_confirm();
-        timesleep(2000);
+    @Quando("^coloco um \"([^\"]*)\"$")
+    public void coloco_um(String cep) throws Throwable {
+        c.preencheCep(cep);
     }
-    @Quando("^colo um cep com caracteres especiais$")
-    public void colo_um_cep_com_caracteres_especiais() throws Throwable {
-        c.digita_cep_esp();
-        timesleep(2000);
-        c.clica_confirm();
-
-    }
-
-    @Quando("^digito um cep com letras$")
-    public void digito_um_cep_com_letras() throws Throwable {
-        c.digita_cep_let();
-        timesleep(2000);
-        c.clica_confirm();
-    }
-
-    @Quando("^deixo em branco o cep$")
-    public void deixo_em_branco_o_cep() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
-    @Quando("^digito cep valido$")
-    public void digito_cep_valido() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
-    }
-
     @Entao("^deve solicitar cep valido$")
     public void oSistemaPedeUmCepValido() throws Throwable {
         c.verifica_cep();
