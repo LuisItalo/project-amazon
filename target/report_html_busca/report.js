@@ -13,68 +13,68 @@ formatter.feature({
   "keyword": "Funcionalidade"
 });
 formatter.scenarioOutline({
-  "line": 11,
-  "name": "cep invalido",
+  "line": 31,
+  "name": "cep valido",
   "description": "",
-  "id": "escolher-cep;cep-invalido",
+  "id": "escolher-cep;cep-valido",
   "type": "scenario_outline",
   "keyword": "Esquema do Cenario",
   "tags": [
     {
-      "line": 10,
-      "name": "@teste1"
+      "line": 30,
+      "name": "@teste3"
     }
   ]
 });
 formatter.step({
-  "line": 12,
-  "name": "coloco um \u003ccep invalido\u003e",
+  "line": 32,
+  "name": "digito \u003ccep valido\u003e",
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 13,
-  "name": "deve solicitar cep valido",
+  "line": 33,
+  "name": "deve confirmar cep na pagina",
   "keyword": "Entao "
 });
 formatter.examples({
-  "line": 15,
-  "name": "lista de ceps invalidos",
+  "line": 35,
+  "name": "cep valido",
   "description": "",
-  "id": "escolher-cep;cep-invalido;lista-de-ceps-invalidos",
+  "id": "escolher-cep;cep-valido;cep-valido",
   "rows": [
     {
       "cells": [
-        "cep invalido"
+        "cep valido"
       ],
-      "line": 16,
-      "id": "escolher-cep;cep-invalido;lista-de-ceps-invalidos;1"
+      "line": 36,
+      "id": "escolher-cep;cep-valido;cep-valido;1"
     },
     {
       "cells": [
-        "\"789412\""
+        "\"41745001\""
       ],
-      "line": 17,
-      "id": "escolher-cep;cep-invalido;lista-de-ceps-invalidos;2"
+      "line": 37,
+      "id": "escolher-cep;cep-valido;cep-valido;2"
     },
     {
       "cells": [
-        "\"!@!@!@\""
+        "\"30710010\""
       ],
-      "line": 18,
-      "id": "escolher-cep;cep-invalido;lista-de-ceps-invalidos;3"
+      "line": 38,
+      "id": "escolher-cep;cep-valido;cep-valido;3"
     },
     {
       "cells": [
-        "\"aqswdefr\""
+        "\"59094330\""
       ],
-      "line": 19,
-      "id": "escolher-cep;cep-invalido;lista-de-ceps-invalidos;4"
+      "line": 39,
+      "id": "escolher-cep;cep-valido;cep-valido;4"
     }
   ],
   "keyword": "Exemplos"
 });
 formatter.before({
-  "duration": 8591650295,
+  "duration": 4635477337,
   "status": "passed"
 });
 formatter.background({
@@ -93,62 +93,62 @@ formatter.match({
   "location": "CepSteps.queAcessoAPaginaDaAmazon()"
 });
 formatter.result({
-  "duration": 16162717240,
+  "duration": 6076512400,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 17,
-  "name": "cep invalido",
+  "line": 37,
+  "name": "cep valido",
   "description": "",
-  "id": "escolher-cep;cep-invalido;lista-de-ceps-invalidos;2",
+  "id": "escolher-cep;cep-valido;cep-valido;2",
   "type": "scenario",
   "keyword": "Esquema do Cenario",
   "tags": [
     {
-      "line": 10,
-      "name": "@teste1"
+      "line": 30,
+      "name": "@teste3"
     }
   ]
 });
 formatter.step({
-  "line": 12,
-  "name": "coloco um \"789412\"",
+  "line": 32,
+  "name": "digito \"41745001\"",
   "matchedColumns": [
     0
   ],
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 13,
-  "name": "deve solicitar cep valido",
+  "line": 33,
+  "name": "deve confirmar cep na pagina",
   "keyword": "Entao "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "789412",
-      "offset": 11
+      "val": "41745001",
+      "offset": 8
     }
   ],
-  "location": "CepSteps.coloco_um(String)"
+  "location": "CepSteps.digito(String)"
 });
 formatter.result({
-  "duration": 8386791431,
+  "duration": 4846999532,
   "status": "passed"
 });
 formatter.match({
-  "location": "CepSteps.oSistemaPedeUmCepValido()"
+  "location": "CepSteps.deve_confirmar_cep_na_pagina()"
 });
 formatter.result({
-  "duration": 180751644,
+  "duration": 198692,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1552639885,
+  "duration": 3239317869,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3031526460,
+  "duration": 1586509795,
   "status": "passed"
 });
 formatter.background({
@@ -167,62 +167,62 @@ formatter.match({
   "location": "CepSteps.queAcessoAPaginaDaAmazon()"
 });
 formatter.result({
-  "duration": 11857969459,
+  "duration": 5499612936,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 18,
-  "name": "cep invalido",
+  "line": 38,
+  "name": "cep valido",
   "description": "",
-  "id": "escolher-cep;cep-invalido;lista-de-ceps-invalidos;3",
+  "id": "escolher-cep;cep-valido;cep-valido;3",
   "type": "scenario",
   "keyword": "Esquema do Cenario",
   "tags": [
     {
-      "line": 10,
-      "name": "@teste1"
+      "line": 30,
+      "name": "@teste3"
     }
   ]
 });
 formatter.step({
-  "line": 12,
-  "name": "coloco um \"!@!@!@\"",
+  "line": 32,
+  "name": "digito \"30710010\"",
   "matchedColumns": [
     0
   ],
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 13,
-  "name": "deve solicitar cep valido",
+  "line": 33,
+  "name": "deve confirmar cep na pagina",
   "keyword": "Entao "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "!@!@!@",
-      "offset": 11
+      "val": "30710010",
+      "offset": 8
     }
   ],
-  "location": "CepSteps.coloco_um(String)"
+  "location": "CepSteps.digito(String)"
 });
 formatter.result({
-  "duration": 5383374997,
+  "duration": 4445820051,
   "status": "passed"
 });
 formatter.match({
-  "location": "CepSteps.oSistemaPedeUmCepValido()"
+  "location": "CepSteps.deve_confirmar_cep_na_pagina()"
 });
 formatter.result({
-  "duration": 137986748,
+  "duration": 90931,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1207427415,
+  "duration": 2330098032,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3026052365,
+  "duration": 1528568440,
   "status": "passed"
 });
 formatter.background({
@@ -241,58 +241,58 @@ formatter.match({
   "location": "CepSteps.queAcessoAPaginaDaAmazon()"
 });
 formatter.result({
-  "duration": 10883761695,
+  "duration": 5461966063,
   "status": "passed"
 });
 formatter.scenario({
-  "line": 19,
-  "name": "cep invalido",
+  "line": 39,
+  "name": "cep valido",
   "description": "",
-  "id": "escolher-cep;cep-invalido;lista-de-ceps-invalidos;4",
+  "id": "escolher-cep;cep-valido;cep-valido;4",
   "type": "scenario",
   "keyword": "Esquema do Cenario",
   "tags": [
     {
-      "line": 10,
-      "name": "@teste1"
+      "line": 30,
+      "name": "@teste3"
     }
   ]
 });
 formatter.step({
-  "line": 12,
-  "name": "coloco um \"aqswdefr\"",
+  "line": 32,
+  "name": "digito \"59094330\"",
   "matchedColumns": [
     0
   ],
   "keyword": "Quando "
 });
 formatter.step({
-  "line": 13,
-  "name": "deve solicitar cep valido",
+  "line": 33,
+  "name": "deve confirmar cep na pagina",
   "keyword": "Entao "
 });
 formatter.match({
   "arguments": [
     {
-      "val": "aqswdefr",
-      "offset": 11
+      "val": "59094330",
+      "offset": 8
     }
   ],
-  "location": "CepSteps.coloco_um(String)"
+  "location": "CepSteps.digito(String)"
 });
 formatter.result({
-  "duration": 5587998228,
+  "duration": 4443099790,
   "status": "passed"
 });
 formatter.match({
-  "location": "CepSteps.oSistemaPedeUmCepValido()"
+  "location": "CepSteps.deve_confirmar_cep_na_pagina()"
 });
 formatter.result({
-  "duration": 116404443,
+  "duration": 167342,
   "status": "passed"
 });
 formatter.after({
-  "duration": 1298598264,
+  "duration": 3371289228,
   "status": "passed"
 });
 });

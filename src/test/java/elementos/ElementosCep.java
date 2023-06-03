@@ -10,6 +10,7 @@ public class ElementosCep {
     public static By digitaCep = By.cssSelector("input[class='a-declarative a-span7']");
     public static By clicaConfirm = By.cssSelector("div[role='button']");
     public static By verificaCep = By.xpath("//*[@id=\"GLUXZipError\"]/div/div/div");
+    public static By confirmaCep = By.cssSelector("span[id=\"glow-ingress-line2\"]");
 
     public static String getUrl() {
         return url;

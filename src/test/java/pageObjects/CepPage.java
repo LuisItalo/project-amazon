@@ -32,8 +32,26 @@ public class CepPage extends BasePage {
         String verif = "Insira um CEP válido";
         String texto = driver.findElement((ElementosCep.verificaCep)).getText();
         Assert.assertEquals(verif, texto);
+    }
 
 
+    public void confirma_cep1(){
+        String verif = "41745001\u200C";
+        String texto = driver.findElement((ElementosCep.confirmaCep)).getText();
+        Assert.assertEquals(verif, texto);
+        timesleep(1000);
+    }
+    public void confirma_cep2(){
+        String verif = "30710010\u200C";
+        String texto = driver.findElement((ElementosCep.confirmaCep)).getText();
+        Assert.assertEquals(verif, texto);
+        timesleep(1000);
+    }
+    public void confirma_cep3(){
+        String verif = "59094330\u200C";
+        String texto = driver.findElement((ElementosCep.confirmaCep)).getText();
+        Assert.assertEquals(verif, texto);
+        timesleep(1000);
     }
 
 }
