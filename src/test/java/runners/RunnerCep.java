@@ -9,8 +9,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = "src/test/resources/features/cep.feature",
         glue = "steps",
-        tags = "@teste3",
-        plugin = {"pretty", "html:target/report_html_busca"},
+        tags = "@teste2",
+        plugin = {"pretty", "html:target/report_html_cep"},
         monochrome = true,
         snippets = SnippetType.CAMELCASE,
         dryRun = false
